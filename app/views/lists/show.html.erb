@@ -1,0 +1,12 @@
+<h1><%= @board.name %></h1>
+<h2><%= @list.name %></h2>
+<h3>Tasks</h3>
+<br />
+<% @list.tasks.each do |task| %>
+  <%= render 'tasks/task', { task: task } %>
+<% end %>
+<br />
+<%= link_to "Add Task", new_list_task_path(@list), class: "ui button blue" %>
+<br />
+<%= link_to "Edit List", edit_board_list_path([@board, @list]) %>
+<%= link_to "Delete List", [@board, @list], method: :delete %>
