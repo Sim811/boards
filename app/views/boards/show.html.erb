@@ -7,6 +7,11 @@
 <% end %>
 
 <%= link_to "Add List", new_board_list_path(@board) %>
+
 <%= link_to "View Lists", board_list_path(@board) %>
+
 <%= link_to "Edit", edit_board_path(@board) %>
+
 <%= link_to "Delete", @board, method: :delete %>
+<br />
+<%= link_to 'Back', boards_path %>
